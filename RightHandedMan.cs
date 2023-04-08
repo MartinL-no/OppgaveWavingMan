@@ -2,17 +2,17 @@
 
 namespace WavingMan
 {
-    public class LeftHandedMan : Man
+    public class RightHandedMan : Man
     {
-        public LeftHandedMan(int x, int y, int dx, int dy) : base(x, y, dx, dy) { }
+        public RightHandedMan(int x, int y, int dx, int dy) : base(x, y, dx, dy) { }
 
         public override void Show()
         {
             SetCursorTop();
             SetCursorLeft();
-            Console.WriteLine(_shouldWaveNextTime ? "\\o " : " o");
+            Console.WriteLine(_shouldWaveNextTime ? " o/" : " o");
             SetCursorLeft();
-            Console.WriteLine(_shouldWaveNextTime ? " |\\ " : " |");
+            Console.WriteLine(_shouldWaveNextTime ? "/|" : " |");
             SetCursorLeft();
             Console.Write("/ \\");
             _shouldWaveNextTime = !_shouldWaveNextTime;

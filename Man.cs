@@ -2,35 +2,19 @@
 
 namespace WavingMan
 {
-    /*
-     * Oppgave:
-     *  Some wavers are left-handed.
-     *  Rewrite the code to use inheritance instead of bool IsLeftHanded
-     */
-    public class Man
+    public abstract class Man
     {
         public Position Position { get; }
         public Position Speed { get; }
+
         protected bool _shouldWaveNextTime = false;
-        public Man(int x, int y, int dx, int dy)
+        protected Man(int x, int y, int dx, int dy)
         {
 
             Position = new Position(x, y);
             Speed = new Position(dx, dy);
         }
-
-        public virtual void Show()
-        {
-            SetCursorTop();
-            SetCursorLeft();
-            Console.WriteLine(_shouldWaveNextTime ? " o/" : " o");
-            SetCursorLeft();
-            Console.WriteLine(_shouldWaveNextTime ? "/|" : " |");
-            SetCursorLeft();
-            Console.Write("/ \\");
-            _shouldWaveNextTime = !_shouldWaveNextTime;
-        }
-
+        public abstract void Show();
         protected void SetCursorTop()
         {
             Console.CursorTop = Math.Max(Position.Y, 0);

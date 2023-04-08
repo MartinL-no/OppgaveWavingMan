@@ -7,11 +7,10 @@ namespace WavingMan
     {
         private readonly Man[] _men = new Man[]
         {
-            new Man(5,5,-1,0),
-            new Man(6,5,1,0),
-            new LeftHandedMan(5,6,0,1), 
+            new RightHandedMan(5,5,-1,0),
+            new RightHandedMan(6,5,1,0),
+            new LeftHandedMan(5,6,0,1),
         };
-
         public void ShowAndMove()
         {
             Console.Clear();
