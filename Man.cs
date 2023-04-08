@@ -11,9 +11,7 @@ namespace WavingMan
     {
         public Position Position { get; }
         public Position Speed { get; }
-        public bool IsLeftHanded { get; set; }
         protected bool _shouldWaveNextTime = false;
-
         public Man(int x, int y, int dx, int dy)
         {
 
