@@ -6,7 +6,6 @@ namespace WavingMan
     {
         public Position Position { get; }
         public Position Speed { get; }
-
         protected bool _shouldWaveNextTime = false;
         protected Man(int x, int y, int dx, int dy)
         {
